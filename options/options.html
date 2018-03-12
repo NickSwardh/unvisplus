@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="jquery-3.3.1.min.js"></script>
+<script src="options.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+<link href="layout.css" rel="stylesheet" type="text/css">
+
+<title>About Unv.is Plus</title>
+</head>
+
+<body>
+
+<div class="container">
+
+	<div style="position: absolute; top: 14px; right: 30px; z-index: 4"><img id="active" style="cursor: pointer" src="on.png" /></div>
+
+	<ul class="tabs" style="z-index: 3">
+		<li class="tab-link current" data-tab="tab-1">ABOUT</li>
+		<li class="tab-link" data-tab="tab-2">SETUP</li>
+	</ul>
+	
+	<div style="z-index: 2; position: relative; top: -1px">
+	
+		<div id="tab-1" class="tab-content current">
+			
+			<h1>ABOUT Unv.is Plus</h1>
+			<p>This browser extension use the service provided by Unv.is, a web proxy tool for stripping away all fancy stuff (like the <a id="firefox" href="#">Readability</a> feature in Firefox) from web pages into a simple readable text-format of almost any web page.</p>
+			
+			<p><b>DISCLAIMER:</b> I'm not part of the <i>www.unv.is</i> project/team. For questions regarding service &amp; functionality, pages that wont filter correctly etc, then contact <a id="unvis" href="#">unv.is</a> for help.</p>
+			
+			<h1>HOW IT WORKS</h1>
+			<ol>
+				<li>Right-click on a link</li>
+				<li>Select <b>Unv.is this link...</b> from the popup menu</li>
+				<li>Enjoy!</li>
+			</ol>
+			
+			<p>Damn! Is that it!? Yup, I know, it's magic, right? When you've mastered the art of right-clicking links, you're ready to unleash the full power and glory of this mighty godlike extension. Click on the SETUP-tab above, build your own list of customized URLs and your browser will automatically unv.is those pages for you. No questions asked!<p>
+			
+			<p>I'm sorry, what? No, there's no limit on how many links you can add. Add as many as you want! Just remember, with great powers comes great responsibility...</p>
+			
+			<p>Oh yeah, one last thing, if, by any chance, you wanna show your support, you can <a id="donate" href="#">do so here</a>.</p>
+			
+			<p>Have fun &amp; toodeloo!<br /><a id="nswardh" href="#">nswardh.com</a></p>
+		</div>
+		<div id="tab-2" class="tab-content">
+			 <p>Add your URL's down below and hit the save button. Also be sure to take a look at the examples on how to customize the list to your liking.</p>
+			 
+			 
+			 <table cellpadding="2" cellspacing="4">
+			<tr>
+				<th>Pattern</th>
+				<th>Matches</th>
+			</tr>
+			<tr>
+				<td id="example">*://*.example.org/*
+					<p>Match all <b>HTTP</b> and <b>HTTPS</b> URLs that are hosted at "example.org" or one of its subdomains.</p>
+				</td>
+				<td id="desc">http://www.example.org/<br />http://www.example.org/some/path/<br />https://some.domain.org/path/</td>
+			</tr>
+					<tr>
+				<td id="example">*://*.example.org/article/*
+					<p>Match all <b>HTTP</b> and <b>HTTPS</b> URLs that are hosted at <b>"example.org"</b> or one of its subdomains <u>WITH</u> <b>article/</b> as path.</p>
+				</td>
+				<td id="desc">http://www.example.org/article/<br />http://www.example.org/article/a/<br />https://a.domain.net/article/</td>
+			</tr>
+			<tr>
+				<td id="example">*://example.com/*
+					<p>Match all HTTP and HTTPS URLs that are hosted at exactly "example.com/".</p>
+				</td>
+				<td id="desc">http://example.com/<br />https://example.com/</td>
+			</tr>
+			</table>
+
+				<ol id="urls">
+					<li><input type="text" name="myURL[]" id="setURL" class="userInput" /></li>
+				</ol>
+
+			<button id="add_URL">Add URL</button> <button id="save">Save</button> <span id="status"></span>
+		
+		
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>
